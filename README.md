@@ -1,2 +1,3 @@
 # Furniture Ecommerce App
-![Main Page](1.png)
+![Home Screen](1.png)
+![Detail Screen](2.png)
