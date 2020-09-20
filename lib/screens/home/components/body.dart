@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:furniture/components/title_text.dart';
 import 'package:furniture/constants.dart';
 import 'package:furniture/models/Categories.dart';
+import 'package:furniture/models/Product.dart';
 import 'package:furniture/services/fetchCategories.dart';
 import 'package:furniture/size_config.dart';
 
@@ -39,9 +40,19 @@ class Body extends StatelessWidget {
         ),
         Container(
           width: defaultSize * 14.5,
-          decoration: BoxDecoration(color: kSecondaryColor),
+          decoration: BoxDecoration(
+              color: kSecondaryColor, borderRadius: BorderRadius.circular(30)),
           child: AspectRatio(
             aspectRatio: 0.693,
+            child: Column(
+              children: [
+                AspectRatio(
+                  aspectRatio: 1,
+                  child: FadeInImage.assetNetwork(
+                      placeholder: "assets/spinner.gif", image: product.image),
+                )
+              ],
+            ),
           ),
         ),
       ],
