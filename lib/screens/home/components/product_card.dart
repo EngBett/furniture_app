@@ -28,8 +28,11 @@ class ProductCard extends StatelessWidget {
             children: [
               AspectRatio(
                 aspectRatio: 1,
-                child: FadeInImage.assetNetwork(
-                  placeholder: "assets/spinner.gif", image: product.image,fit: BoxFit.cover,),
+                child: Hero(
+                  tag: product.id,
+                  child: FadeInImage.assetNetwork(
+                    placeholder: "assets/spinner.gif", image: product.image,fit: BoxFit.cover,),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: defaultSize),
